@@ -1,3 +1,4 @@
 ﻿# Настройки сервера Apache 
- Options Indexes 
- DirectoryIndex index.php 
+Options Indexes 
+DirectoryIndex index.php
+php_value short_open_tag 1
