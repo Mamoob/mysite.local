@@ -25,7 +25,7 @@
     $size = (int) ini_get("post_max_size");
     $letter = substr(ini_get("post_max_size"), -1);
     echo $letter;
-    switch ($letter){
+    switch (strtoupper($letter)){
       case "G":
         $size = $size * 1024;
       case "M":
