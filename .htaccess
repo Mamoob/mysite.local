@@ -1,0 +1,3 @@
+﻿# Настройки сервера Apache 
+ Options Indexes 
+ DirectoryIndex index.php 
