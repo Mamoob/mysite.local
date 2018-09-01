@@ -1,6 +1,8 @@
 <?php
-$i = 1;
-$c = 2;
-echo "$i + $c\n";
-echo strftime('%d-%B-%Y, %A');
+$var = "HE LLO";
+$i=0;
+while($var[$i]==true){
+  echo "$var[$i]\n";
+  $i++;
+}
 ?>

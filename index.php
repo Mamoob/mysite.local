@@ -68,11 +68,11 @@ $year = strftime(" %Y ");
     <!-- Меню -->
 <?php
 $leftMenu = [
-  ["link"=>"Домой", "herf"=>"index.php"],
-  ["link"=>"О нас", "herf"=>"about.php"],
-  ["link"=>"Контакты", "herf"=>"contact.php"],
-  ["link"=>"Таблица умножения", "herf"=>"table.php"],
-  ["link"=>"Калькулятор", "herf"=>"calc.php"],
+  ["link"=>"Домой", "href"=>"index.php"],
+  ["link"=>"О нас", "href"=>"about.php"],
+  ["link"=>"Контакты", "href"=>"contact.php"],
+  ["link"=>"Таблица умножения", "href"=>"table.php"],
+  ["link"=>"Калькулятор", "href"=>"calc.php"]
   ];
   
   
