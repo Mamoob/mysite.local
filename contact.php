@@ -21,6 +21,21 @@
     <h1>Обратная связь</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
+    <?php
+    $size = (int) ini_get("post_max_size");
+    $letter = substr(ini_get("post_max_size"), -1);
+    echo $letter;
+    switch ($letter){
+      case "G":
+        $size = $size * 1024;
+      case "M":
+        $size = $size * 1024;
+      case "K":
+        $size = $size * 1024;
+      default:
+        $size;
+    }
+    ?>
     <h3>Адрес</h3>
     <p>123456 Москва, Малый Американский переулок 21</p>
     <h3>Задайте вопрос</h3>
@@ -36,6 +51,7 @@
       <br />
       <input type='submit' value='Отправить' />
     </form>
+    <p>Максимальный размер отправляемых данных равен <?=$size ?> байт.</p>
     <!-- Область основного контента -->
   </div>
   <div id="nav">
