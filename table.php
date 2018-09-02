@@ -1,7 +1,27 @@
 <?php 
-$cols = 10;
-$rows = 10;
-$color = blue;
+function draw_table($cols, $rows, $color = "yello"){
+  echo "<table border='2'>";
+    for($i = 1;$i <= $rows;$i++){
+      echo "<tr>";
+      for($c =1;$c <= $cols;$c++){
+        if ($c == 1 or $i == 1){
+          echo "<th style='background:$color'>";
+          echo $i * $c;
+          echo "</th>";
+        }else{
+          echo "<td>";
+          echo $i * $c;
+          echo "</td>";
+        }
+      }
+      echo "</tr>";
+    }
+    
+    echo "</table>";
+  
+  
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -45,24 +65,7 @@ $color = blue;
     </form>
     <!-- Таблица -->
     <?php 
-    echo "<table border='2' width='200'>";
-    for($i = 1;$i <= $rows;$i++){
-      echo "<tr>";
-      for($c =1;$c <= $cols;$c++){
-        if ($c == 1 or $i == 1){
-          echo "<th style=background:$color>";
-          echo $i * $c;
-          echo "</th>";
-        }else{
-          echo "<td>";
-          echo $i * $c;
-          echo "</td>";
-        }
-      }
-      echo "</tr>";
-    }
-    
-    echo "</table>";
+    draw_table(27,39,"green");
     ?>
 
     <!-- Таблица -->
