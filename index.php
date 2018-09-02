@@ -1,8 +1,21 @@
 <?php
+
+#инициализация массива
+
+$leftMenu = [
+  ["link"=>"Домой", "href"=>"index.php"],
+  ["link"=>"О нас", "href"=>"about.php"],
+  ["link"=>"Контакты", "href"=>"contact.php"],
+  ["link"=>"Таблица умножения", "href"=>"table.php"],
+  ["link"=>"Калькулятор", "href"=>"calc.php"]
+  ];
+
 /*
  * Получаем текущий час в  виде строки от 00 до 23
  * и приводим строку к целому числу от 0 до 23
-*/
+ */
+
+
 $hour = (int) strftime(" %H ");
 $welcome = "Доброй ночи"; # инициализация переменной
 if($hour >=6 and $hour <=11){
@@ -66,26 +79,13 @@ $year = strftime(" %Y ");
     <!-- Навигация -->
     <h2>Навигация по сайту</h2>
     <!-- Меню -->
-<?php
-$leftMenu = [
-  ["link"=>"Домой", "href"=>"index.php"],
-  ["link"=>"О нас", "href"=>"about.php"],
-  ["link"=>"Контакты", "href"=>"contact.php"],
-  ["link"=>"Таблица умножения", "href"=>"table.php"],
-  ["link"=>"Калькулятор", "href"=>"calc.php"]
-  ];
-  
-  
-  
-
-?>
-    <ul>
-      <li><a href='<?=$leftMenu[0]['href']?>'><?= $leftMenu[0]['link']?></a></li>
-      <li><a href='<?=$leftMenu[1]['href']?>'><?= $leftMenu[1]['link']?></a></li>
-      <li><a href='<?=$leftMenu[2]['href']?>'><?= $leftMenu[2]['link']?></a></li>
-      <li><a href='<?=$leftMenu[3]['href']?>'><?= $leftMenu[3]['link']?></a></li>
-      <li><a href='<?=$leftMenu[4]['href']?>'><?= $leftMenu[4]['link']?></a></li>
-    </ul>
+  <?php
+  echo "<ul>";
+  foreach($leftMenu as $key){
+  echo "<li><a href={$key['href']}>{$key['link']}</a></li>";
+  }
+  echo "</ul>";
+  ?>
     <!-- Меню -->
     <!-- Навигация -->
   </div>
