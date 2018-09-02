@@ -1,4 +1,24 @@
 <?php
+function draw_menu($menu, $vertical="true"){
+  if ($vertical=="true"){
+    echo "<ul>";
+    foreach($menu as $key){
+      echo "<li>";
+      echo "<a href={$key['href']}>{$key['link']}</a>";
+      echo "</li>";
+  }
+    echo "</ul>";
+  }else{
+    echo "<ul>";
+    foreach($menu as $key){
+    echo "<li style='margin-right:15px; display:inline;'>";
+    echo "<a href={$key['href']}>{$key['link']}</a>";
+    echo "</li>";
+  }
+  echo "</ul>";
+  }
+  
+}
 
 #инициализация массива
 
@@ -80,20 +100,21 @@ $year = strftime(" %Y ");
     <h2>Навигация по сайту</h2>
     <!-- Меню -->
   <?php
-  echo "<ul>";
-  foreach($leftMenu as $key){
-  echo "<li><a href={$key['href']}>{$key['link']}</a></li>";
-  }
-  echo "</ul>";
+  draw_menu($leftMenu, true);
   ?>
     <!-- Меню -->
     <!-- Навигация -->
+
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->
+   <?php
+   draw_menu($leftMenu, false);
+   ?>
     &copy; Супер Мега Веб-мастер, 2000 &ndash; <?=$year ?>
     <!-- Нижняя часть страницы -->
   </div>
+
 </body>
 
 </html>
